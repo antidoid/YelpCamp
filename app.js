@@ -29,12 +29,6 @@ mongoose.connect(dbUrl, {
     useUnifiedTopology: true,
     useFindAndModify: false
 })
-// .then(() => { 
-//     console.log("Database Connected");
-// })
-// .catch(err => {
-//     console.error.bind(console, "Connection error:");
-// })
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "Connection error:"));
